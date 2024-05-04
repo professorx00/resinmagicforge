@@ -16,7 +16,6 @@
     "vue-router": "^4.3.0"
   },
   "engines": {
-    "node": "16.x",
-    "yarn": "^0.14.0"
+    "node": "20.x"
   }
 }
