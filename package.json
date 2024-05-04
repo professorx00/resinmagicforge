@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "npm run build:digitalocean",
     "build:digitalocean": "npm install --production=false && npm run build && npm ci",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
