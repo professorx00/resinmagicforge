@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile",
+    "build:digitalocean": "npm install --production=false && npm run build && npm ci",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -15,7 +15,6 @@
     "vue-router": "^4.3.0"
   },
   "engines": {
-    "node": "16.x",
-    "yarn": "^0.14.0"
+    "node": "16.x"
   }
 }
