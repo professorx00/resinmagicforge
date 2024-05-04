@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "build:digitalocean": "npm install --production=false && npm run build",
+    "build:digitalocean": "npm install --production=false && npm run build && npm ci",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -16,6 +16,7 @@
     "vue-router": "^4.3.0"
   },
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "npm": "10.x"
   }
 }
