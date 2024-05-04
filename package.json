@@ -1,9 +1,8 @@
 {
-  "name": "nuxt-app",
+  "name": "resin-magic-forge",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
     "build:digitalocean": "yarn install --production=false && yarn run build && rm -rf node_modules && yarn install --production --frozen-lockfile",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
@@ -16,6 +15,7 @@
     "vue-router": "^4.3.0"
   },
   "engines": {
+    "node": "16.x",
     "yarn": "^0.14.0"
   }
 }
