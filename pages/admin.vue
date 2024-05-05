@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="h-screen text-neutral-content">
         <div v-if="!accessGranted">
              <FormKit type="form" id="myForm" :actions="false" @submit="handleSubmit" :classes="{form:'w-full bg-wizardBlue flex flex-col justify-center items-center rounded-lg h-screen', message: 'text-red-500 text-2xl'}">
                 <FormKit
@@ -25,17 +25,17 @@
         </div>
         <div v-if="accessGranted">
             Access Granted
-            <div class="overflow-x-auto">
-                <table class="table">
+            <div class="overflow-x-auto text-white">
+                <table class="table text-neutral-content">
                      <thead>
                         <tr>
-                            <th>File Name</th>
-                            <th>Actions</th>
+                            <th class="text-neutral-content">File Name</th>
+                            <th class="text-neutral-content">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr v-for="file in files">
-                            <td>{{file}}</td>
+                            <td class="text-neutral-content">{{file}}</td>
                             <td>
                                 <button @click="()=>{handleDelete(file)}" class="btn text-wizardLight hover:text-wizardDark bg-wizardDark px-6 text-2xl m-6"><span class="icon-[fa6-solid--trash]"></span></button>
                                 <a :href="'/upload/'+file" class="btn text-wizardLight hover:text-wizardDark bg-wizardDark px-6 text-2xl m-6"><span class="icon-[fa6-solid--file-arrow-down]"></span></a>
