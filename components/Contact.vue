@@ -43,7 +43,7 @@
                                 message: 'text-red-500 bg-pink-300 rounded-lg p-2  w-3/6'
                             }"
                             />
-                            <FormKit
+                            <!-- <FormKit
                                 name="dfiles"
                                 type="file"
                                 label="Files"
@@ -56,7 +56,7 @@
                                     outer: 'w-11/12 flex flex-col justify-center ',
                                     fileRemove: 'btn btn-primary'
                                 }"
-                                />
+                                /> -->
                                 <FormKit
                                     type="submit"
                                     label="Send"
@@ -81,31 +81,28 @@ emailjs.init({
         publicKey: config.public.emailjs,
       })
 async function handleSubmit(data,node) {
-   const body = new FormData()
+//    const body = new FormData()
    const emailData = {}
-   body.append('name', data.name)
-   body.append('email', data.email)
-   body.append('request', data.request)
+//    body.append('name', data.name)
+//    body.append('email', data.email)
+//    body.append('request', data.request)
    emailData['name'] = data.name
    emailData['email'] = data.email
    emailData['request']= data.request
-   data.dfiles.forEach((fileItem) => {
-    body.append('dFiles', fileItem.file)
-    emailData['link'] = `http://www.resinmagicforge/${fileItem.name}`
-   })
-    const res = await fetch('/api/upload', {
-        method: 'POST',
-        body: body
-    })
-    if(res.ok){
-       const eres = await emailjs.send('service_rmf','resinMagicFormRequest', emailData)
-       if(eres.status == 200){
-        alert("File Uploaded Successfully")
+//    data.dfiles.forEach((fileItem) => {
+//     body.append('dFiles', fileItem.file)
+//     emailData['link'] = `http://www.resinmagicforge/${fileItem.name}`
+//    })
+//     const res = await fetch('/api/upload', {
+//         method: 'POST',
+//         body: body
+//     })
+
+    const eres = await emailjs.send('service_rmf','resinMagicFormRequest', emailData)
+    if(eres.status == 200){
+        alert("please check your email")
         node.reset()
        }
-    }else{
-        node.setError(["Error Uploading File.. "])
-    }
     }
 </script>
 
