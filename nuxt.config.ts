@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["vue3-carousel-nuxt", "nuxt-icon", "@formkit/nuxt"],
+  modules: ["vue3-carousel-nuxt", "@formkit/nuxt"],
   formkit: {
     autoImport: true,
   },
