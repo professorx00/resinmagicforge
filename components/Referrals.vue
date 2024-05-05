@@ -1,29 +1,55 @@
 <template>
-    <div class="w-full flex flex-col justify-center items-center bg-wizardDark p-10 h-screen text-white">
-      <h1 class="mb-5 text-5xl font-bold">See What Others Are Saying</h1>
-      <div class="w-6/12 m-1">
-        <Carousel :items-to-show="2.5" :wrap-around="true">
-          <Slide v-for="slide in referrals" :key="slide.id">
-            <div class="card w-96 bg-base-100 shadow-xl">
-              <div class="card-body">
-                <h2 class="card-title">{{slide.title}}</h2>
-                <p>{{slide.author}}</p>
+  <div class="bg-wizardDark p-10 h-1/3">
+      <div class="w-full lg:flex flex-col justify-center items-center h-1/2 text-white hidden ">
+        <h1 class="mb-5 text-5xl font-bold">See What Others Are Saying</h1>
+        <div class="w-6/12 h-1/3 m-1">
+          <Carousel :items-to-show="2" :wrap-around="true">
+            <Slide v-for="slide in referrals" :key="slide.id">
+              <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title">{{slide.title}}</h2>
+                  <p>{{slide.author}}</p>
+                </div>
               </div>
-            </div>
-          </Slide>
+            </Slide>
 
-          <template #addons>
-             <Navigation>
-                <template #next>
-                    <span class="icon-[fa6-solid--caret-right]"></span>
-                </template>
-                <template #prev>
-                    <span class="icon-[fa6-solid--caret-left]"></span>
-                </template>
-            </Navigation>
-            <Pagination />
-          </template>
-        </Carousel>
+            <template #addons>
+              <Navigation>
+                  <template #next>
+                      <span class="icon-[fa6-solid--caret-right]"></span>
+                  </template>
+                  <template #prev>
+                      <span class="icon-[fa6-solid--caret-left]"></span>
+                  </template>
+              </Navigation>
+              <Pagination />
+            </template>
+          </Carousel>
+        </div>
+      </div>
+      <div class="h-1/3 text-black lg:hidden flex flex-col justify-center">
+         <Carousel :wrap-around="true">
+            <Slide v-for="slide in referrals" :key="slide.id">
+              <div class="card w-96 bg-base-100 shadow-xl">
+                <div class="card-body">
+                  <h2 class="card-title">{{slide.title}}</h2>
+                  <p>{{slide.author}}</p>
+                </div>
+              </div>
+            </Slide>
+
+            <template #addons>
+              <Navigation>
+                  <template #next>
+                      <span class="icon-[fa6-solid--caret-right]"></span>
+                  </template>
+                  <template #prev>
+                      <span class="icon-[fa6-solid--caret-left]"></span>
+                  </template>
+              </Navigation>
+              <Pagination />
+            </template>
+          </Carousel>
       </div>
     </div>
 </template>
@@ -73,7 +99,7 @@ const referrals = ref([
 .carousel__slide{
   min-height: 10px;
   max-height: 550px;
-  width: 50%;
+  width: 100%;
   color: black;
   font-size: 20px;
   border-radius: 8px;

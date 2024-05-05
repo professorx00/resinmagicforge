@@ -12,6 +12,7 @@
     "start": "node .output/server/index.mjs"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@formkit/nuxt": "^1.6.2",
     "@iconify/json": "^2.2.206",
     "@iconify/tailwind": "^1.0.1",
