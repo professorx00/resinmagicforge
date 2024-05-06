@@ -13,11 +13,11 @@
     </div>
     <div class="w-full flex flex-col justify-center items-center bg-wizardBlue p-10 h-screen">
       <h1 class="mb-5 text-5xl font-bold">Look What We Do</h1>
-      <div class="w-6/12">
+      <div class="w-11/12">
         <Carousel :wrap-around="true">
           <Slide v-for="slide in images" :key="slide.id">
             <div class="flex flex-col justify-center items-center">
-              <img :src="slide.url" style="height: 550px;" />
+              <img :src="slide.url" class="lg:h-1/2 lg:w-1/2 sm:w-5/6 sm:h-5/6" />
             </div>
           </Slide>
 
