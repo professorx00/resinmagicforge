@@ -2,11 +2,11 @@
   <div class="bg-wizardDark p-10 h-1/3">
       <div class="w-full lg:flex flex-col justify-center items-center h-1/2 text-white hidden ">
         <h1 class="mb-5 text-5xl font-bold">See What Others Are Saying</h1>
-        <div class="w-6/12 h-1/3 m-1">
-          <Carousel :items-to-show="2" :wrap-around="true">
+        <div class="w-6/12 h-1/3 m-1 ">
+          <Carousel :wrap-around="true">
             <Slide v-for="slide in referrals" :key="slide.id">
-              <div class="card w-96 bg-white shadow-xl">
-                <div class="card-body">
+              <div class="card w-96 bg-white">
+                <div class="card-body bg-white">
                   <h2 class="card-title">{{slide.title}}</h2>
                   <p>{{slide.author}}</p>
                 </div>
@@ -94,6 +94,10 @@ const referrals = ref([
   --vc-nav-color: #ffbf7a;
   --vc-nav-color-hover: #3d250b;
   --vc-nav-background: transparent;
+
+  --vc-clr-primary: #fff;
+  --vc-clr-secondary: #fff;
+  --vc-clr-white: #ffffff;
 }
 
 .carousel__slide{
