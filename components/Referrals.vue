@@ -5,7 +5,7 @@
         <div class="w-6/12 h-1/3 m-1">
           <Carousel :items-to-show="2" :wrap-around="true">
             <Slide v-for="slide in referrals" :key="slide.id">
-              <div class="card w-96 bg-base-100 shadow-xl">
+              <div class="card w-96 bg-white shadow-xl">
                 <div class="card-body">
                   <h2 class="card-title">{{slide.title}}</h2>
                   <p>{{slide.author}}</p>
