@@ -3,7 +3,7 @@
       <div class="w-full lg:flex flex-col justify-center items-center h-1/2 text-white hidden ">
         <h1 class="mb-5 text-5xl font-bold">See What Others Are Saying</h1>
         <div class="w-6/12 h-1/3 m-1 ">
-          <Carousel :wrap-around="true">
+          <Carousel  :items-to-show="2.5"  :wrap-around="true">
             <Slide v-for="slide in referrals" :key="slide.id">
               <div class="card w-96 bg-white">
                 <div class="card-body bg-white">
@@ -30,7 +30,7 @@
       <div class="h-1/3 text-black lg:hidden flex flex-col justify-center">
          <Carousel :wrap-around="true">
             <Slide v-for="slide in referrals" :key="slide.id">
-              <div class="card w-96 bg-base-100 shadow-xl">
+              <div class="card w-96 bg-white shadow-xl">
                 <div class="card-body">
                   <h2 class="card-title">{{slide.title}}</h2>
                   <p>{{slide.author}}</p>
