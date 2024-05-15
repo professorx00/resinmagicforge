@@ -2,7 +2,7 @@
     <div class="w-full flex flex-col justify-center items-center bg-wizardBlue lg:p-10 h-screen lg:text-xl ">
         <div class="w-full flex lg:flex-row flex-col  justify-center items-center">
             <div class="lg:w-4/12 w-full flex flex-col justify-center lg:items-end items-center ">
-                <img src="/images/logo8.png" class="lg:w-full w-1/2"/>
+                <img src="/images/mainLogo.png" class="lg:w-full w-1/2"/>
             </div>
             <div class="lg:w-6/12 w-full flex flex-col justify-center items-center">
                 <h1 class="mb-5 text-5xl font-bold">Contact Us</h1>
